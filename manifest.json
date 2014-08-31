@@ -1,0 +1,57 @@
+{
+  "name": "Sickbeard",
+  "id": "sickbeard",
+  "description": {
+    "en": "SickBeard is a PVR for newsgroup users (with limited torrent support). It watches for new episodes of your favorite shows and when they are posted it downloads them, sorts and renames them...",
+    "fr": "SickBeard is a PVR for newsgroup users (with limited torrent support). It watches for new episodes of your favorite shows and when they are posted it downloads them, sorts and renames them..."
+  },
+  "developer": {
+    "name": "Zabie",
+    "email": " ",
+    "url": " "
+  },
+  "multi_instance": "false",
+  "arguments": {
+    "install": [
+      {
+        "name": "domain",
+        "ask": {
+          "en": "Choose a domain for sickbeard"
+        },
+        "example": "domain.org"
+      },
+      {
+        "name": "path",
+        "ask": {
+          "en": "Choose a path for sickbeard"
+        },
+        "example": "/sickbeard",
+        "default": "/sickbeard"
+      },
+      {
+        "name": "ip",
+        "ask": {
+          "en": "Choose host for app, if you keep default 127.0.0.1, app will be installed on Yunohost during the process"
+        },
+        "example": "192.168.X.X",
+        "default": "127.0.0.1"
+      },
+	  {
+        "name": "fork",
+        "ask": {
+          "en": "Enter the fork's git URL (Used only for localhost installation) :"
+        },
+        "example": "https://github.com/sarakha63/Sick-Beard",
+        "default": "https://github.com/midgetspy/Sick-Beard"
+      },
+      {
+        "name": "port",
+        "ask": {
+          "en": "Choose the listening port of the app (not used if it's a local installation)"
+        },
+        "example": "8081",
+        "default": "8081"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+domain=$(sudo yunohost app setting cops domain)
+app=sickbeard
+user=sickbeard
+
+sudo service $app stop
+sudo killall $app
+sudo update-rc.d $app remove
+
+sudo deluser $user
+
+sudo rm -f /etc/nginx/conf.d/$domain.d/$app.conf
+sudo rm -f /etc/init.d/$app
+sudo rm -rf /opt/yunohost/$app
+sudo rm -rf /var/run/$app
+
+sudo yunohost service remove $app
+sudo service nginx reload
