@@ -7,8 +7,8 @@ ip=$3
 fork=$4
 port=$5
 
-app=sickbeard
-user=sickbeard
+app=sickrage
+user=sickrage
 install_dir=/opt/yunohost/$app
 
 # Check domain/path availability
@@ -28,12 +28,12 @@ if [[ $ip == "127.0.0.1" ]]; then
 	# The Python module Cheetah is required
 	sudo apt-get install python-cheetah
 	
-	# Install the latest version of Sickbeard-Manager using the fork
+	# Install the latest version of Sickrage-Manager using the fork
 	sudo mkdir -p $install_dir
 	sudo git clone https://github.com/SiCKRAGETV/SickRage $install_dir
-	#sudo git clone $fork $install_dir
+	# sudo git clone $fork $install_dir
 
-    # Create sickbeard user
+    # Create sickrage user
 	sudo groupadd $user
 	sudo useradd -d $install_dir -g $user -s /bin/false $user
 	sudo chown -R $user:$user $install_dir
@@ -53,7 +53,7 @@ if [[ $ip == "127.0.0.1" ]]; then
 	sleep 10
 	sudo /etc/init.d/$app stop
 		
-	# Sickbeard Conf files
+	# Sickrage Conf files
 	#sed -i "s@PATHTOCHANGE@$path@g" ../conf/config.ini
 	#sed -i "s@PORT@$port@g" ../conf/config.ini
 	#sudo cp ../conf/config.ini $install_dir/config.ini
