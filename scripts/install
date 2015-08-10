@@ -42,8 +42,11 @@ if [[ $ip == "127.0.0.1" ]]; then
 	sudo cp -a ../conf/$app /etc/init.d/
 	sudo chown root:root /etc/init.d/$app
 	sudo chmod +x /etc/init.d/$app
-	sudo sed -i "s@PATHTOCHANGE@$path@g" /etc/init.d/$app
-	sudo sed -i "s@PORT@$port@g" /etc/init.d/$app
+	
+	#sudo sed -i "s@PATHTOCHANGE@$path@g" /etc/init.d/$app
+	#sudo sed -i "s@PORT@$port@g" /etc/init.d/$app
+	sudo sed -i "s@INSTALLDIR@$install_dir@g" ../conf/sickrage.settings 
+	sudo cp -a ../conf/sickrage.settings /etc/default/sickrage
 	
 	# Start App in order to create conf files
 	sudo /etc/init.d/$app start
@@ -51,9 +54,9 @@ if [[ $ip == "127.0.0.1" ]]; then
 	sudo /etc/init.d/$app stop
 		
 	# Sickbeard Conf files
-	sed -i "s@PATHTOCHANGE@$path@g" ../conf/config.ini
-	sed -i "s@PORT@$port@g" ../conf/config.ini
-	sudo cp ../conf/config.ini $install_dir/config.ini
+	#sed -i "s@PATHTOCHANGE@$path@g" ../conf/config.ini
+	#sed -i "s@PORT@$port@g" ../conf/config.ini
+	#sudo cp ../conf/config.ini $install_dir/config.ini
 fi
 
 # Configure Nginx 
