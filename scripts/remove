@@ -1,6 +1,6 @@
 #!/bin/bash
 
-domain=$(sudo yunohost app setting cops domain)
+domain=$(sudo yunohost app setting sickrage domain)
 app=sickrage
 user=sickrage
 
