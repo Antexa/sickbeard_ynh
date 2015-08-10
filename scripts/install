@@ -54,9 +54,9 @@ if [[ $ip == "127.0.0.1" ]]; then
 	sudo /etc/init.d/$app stop
 		
 	# Sickrage Conf files
-	#sed -i "s@PATHTOCHANGE@$path@g" ../conf/config.ini
-	#sed -i "s@PORT@$port@g" ../conf/config.ini
-	#sudo cp ../conf/config.ini $install_dir/config.ini
+	sed -i "s@PATHTOCHANGE@$path@g" ../conf/config.ini
+	sed -i "s@PORT@$port@g" ../conf/config.ini
+	sudo cp ../conf/config.ini $install_dir/config.ini
 fi
 
 # Configure Nginx 
