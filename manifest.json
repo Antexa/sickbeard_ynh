@@ -1,9 +1,9 @@
 {
-  "name": "Sickbeard",
-  "id": "sickbeard",
+  "name": "Sickrage",
+  "id": "sickrage",
   "description": {
-    "en": "SickBeard is a PVR for newsgroup users (with limited torrent support). It watches for new episodes of your favorite shows and when they are posted it downloads them, sorts and renames them...",
-    "fr": "SickBeard is a PVR for newsgroup users (with limited torrent support). It watches for new episodes of your favorite shows and when they are posted it downloads them, sorts and renames them..."
+    "en": "SickRage is an automatic video library manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.",
+    "fr": "SickRage is an automatic video library manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic."
   },
   "developer": {
     "name": "Zabie",
@@ -16,17 +16,17 @@
       {
         "name": "domain",
         "ask": {
-          "en": "Choose a domain for sickbeard"
+          "en": "Choose a domain for sickrage"
         },
         "example": "domain.org"
       },
       {
         "name": "path",
         "ask": {
-          "en": "Choose a path for sickbeard"
+          "en": "Choose a path for sickrage"
         },
-        "example": "/sickbeard",
-        "default": "/sickbeard"
+        "example": "/sickrage",
+        "default": "/sickrage"
       },
       {
         "name": "ip",
@@ -41,8 +41,8 @@
         "ask": {
           "en": "Enter the fork's git URL (Used only for localhost installation) :"
         },
-        "example": "https://github.com/sarakha63/Sick-Beard",
-        "default": "https://github.com/midgetspy/Sick-Beard"
+        "example": "https://github.com/SiCKRAGETV/SickRage",
+        "default": "https://github.com/SiCKRAGETV/SickRage"
       },
       {
         "name": "port",
