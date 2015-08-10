@@ -30,8 +30,8 @@ if [[ $ip == "127.0.0.1" ]]; then
 	
 	# Install the latest version of Sickbeard-Manager using the fork
 	sudo mkdir -p $install_dir
-	#sudo git clone https://github.com/sarakha63/Sick-Beard $install_dir
-	sudo git clone $fork $install_dir
+	sudo git clone https://github.com/SiCKRAGETV/SickRage $install_dir
+	#sudo git clone $fork $install_dir
 
     # Create sickbeard user
 	sudo groupadd $user
